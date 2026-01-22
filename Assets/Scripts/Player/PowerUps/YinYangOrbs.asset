@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c649e1c0abc2f344e8d8029486c4953f, type: 3}
+  m_Name: YinYangOrbs
+  m_EditorClassIdentifier: 
+  helpers:
+  - name: Green
+    helper: {fileID: 821119174972722663, guid: e7ada7b5df4e2f44a88a7f59d7d611b2, type: 3}
+    positionOffset: {x: 0.8, y: -0.5}
+  - name: Purple
+    helper: {fileID: 6879991281748243974, guid: 459b2c18daeb8df43ba4b62e47f99d36, type: 3}
+    positionOffset: {x: -1.2, y: 0.2}
+  - name: Yellow
+    helper: {fileID: 803218455735798694, guid: 5da028ce02ea12f4c854531584d206d5, type: 3}
+    positionOffset: {x: 1.2, y: 0.2}
+  - name: Red
+    helper: {fileID: 6230144406409202205, guid: 8df5b720b71c05942998d30737449ca4, type: 3}
+    positionOffset: {x: -0.8, y: -0.5}

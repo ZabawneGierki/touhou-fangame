@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Characters Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Characters
+  m_TableCollectionNameGuidString: f6c5f93329bed724d968cdbf9c421536
+  m_Entries:
+  - m_Id: 13673959424
+    m_Key: reimu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74059354112
+    m_Key: reimu_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159509909504
+    m_Key: marisa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175196606464
+    m_Key: marisa_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 298593030144
+    m_Key: reisen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055929143296
+    m_Key: reisen_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2017253327900672
+    m_Key: testDialogue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3546728544866304
+    m_Key: DoYouWantToContinue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6840819055595520
+    m_Key: CompletedChapter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17353140861407232
+    m_Key: disclaimer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362756169109504
+    m_Key: easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362775534211072
+    m_Key: medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362788851126272
+    m_Key: lunatic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362801484369920
+    m_Key: hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17778119927140352
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3531849704625668196
+  references:
+    version: 2
+    RefIds:
+    - rid: 3531849704625668196
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1764359687608

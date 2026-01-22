@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Projectile
+  - MiniProjectile
+  - Enemy
+  - Bullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - FocusBall
+  - Player
+  - Walls
+  - Items
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 757004305
+    locked: 0
+  - name: Items
+    uniqueID: 2599247667
+    locked: 0
+  - name: Player
+    uniqueID: 4273092793
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1078785621
+    locked: 0
+  - name: Enemies
+    uniqueID: 1534436727
+    locked: 0
+  - name: UI
+    uniqueID: 3182144995
+    locked: 0
+  m_RenderingLayers:
+  - Default

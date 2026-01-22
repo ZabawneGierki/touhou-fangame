@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Characters_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f6c5f93329bed724d968cdbf9c421536, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 9194770636066521088
+  m_TableData:
+  - m_Id: 13673959424
+    m_Localized: Reimu Hakurei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74059354112
+    m_Localized: Reimu Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159509909504
+    m_Localized: Marisa Kirisame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175196606464
+    m_Localized: Description of Marisa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 298593030144
+    m_Localized: Reisen Udongein Inaba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055929143296
+    m_Localized: description of Reisen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2017253327900672
+    m_Localized: "la la la la la\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3546728544866304
+    m_Localized: Do you want to continue? {0} continues remaining.
+    m_Metadata:
+      m_Items:
+      - rid: 9194770636066521088
+  - m_Id: 6840819055595520
+    m_Localized: Chapter  {0} Complete!
+    m_Metadata:
+      m_Items:
+      - rid: 9194770636066521088
+  - m_Id: 17353140861407232
+    m_Localized: This is a 2hu project fangame!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362756169109504
+    m_Localized: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362775534211072
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362788851126272
+    m_Localized: Lunatic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362801484369920
+    m_Localized: Hard
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 9194770636066521088
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 3546728544866304
+        - id: 6840819055595520

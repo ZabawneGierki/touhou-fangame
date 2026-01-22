@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Characters_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: f6c5f93329bed724d968cdbf9c421536, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 9194770636066521089
+  m_TableData:
+  - m_Id: 13673959424
+    m_Localized: Reimu Hakurei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74059354112
+    m_Localized: Opis Reimu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159509909504
+    m_Localized: Marisa Kirisame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175196606464
+    m_Localized: Opis Marisy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 298593030144
+    m_Localized: Rodzynka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055929143296
+    m_Localized: Opis Reisen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2017253327900672
+    m_Localized: la la la la
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3546728544866304
+    m_Localized: "Czy chcesz kontunuowa\u0107? Pozosta\u0142o {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 9194770636066521089
+  - m_Id: 6840819055595520
+    m_Localized: "Rozdzia\u0142  {0} pokonany!"
+    m_Metadata:
+      m_Items:
+      - rid: 9194770636066521089
+  - m_Id: 17353140861407232
+    m_Localized: To jest gra fanowska projektu wschodniego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362756169109504
+    m_Localized: "\u0141atwy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362775534211072
+    m_Localized: "\u015Aredni"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362788851126272
+    m_Localized: "Pierdolni\u0119ty"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362801484369920
+    m_Localized: Trudny
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 9194770636066521089
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 3546728544866304
+        - id: 6840819055595520

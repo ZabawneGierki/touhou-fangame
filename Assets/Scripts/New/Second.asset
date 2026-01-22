@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91321e369c0fcd4cbb02d2b42a9978c, type: 3}
+  m_Name: Second
+  m_EditorClassIdentifier: 
+  waveName: Fala Statyczna
+  timeAfterThisWave: 10
+  enemyPrefab: {fileID: 6629203635037854660, guid: 56f306f1a1395f14ea0cc28760ac3b1e, type: 3}
+  spawnPoints:
+  - {fileID: 1465224687143937241, guid: 73d32da276de6fd49aa3c0aa49eef168, type: 3}
+  - {fileID: 2824342591983076762, guid: 49695562edb35524ba96a0dfaddf990e, type: 3}
+  - {fileID: 2843608369239452701, guid: 8528d3f1fd300e4478b1ac56600d9e48, type: 3}
+  shootingPattern: {fileID: 11400000, guid: 9ff7f08afea5bb040a48161840df90d3, type: 2}
