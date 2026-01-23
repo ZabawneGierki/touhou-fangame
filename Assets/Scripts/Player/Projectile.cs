@@ -11,16 +11,6 @@ public class Projectile : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        rb.linearVelocity = new Vector2(0, 10f);
-        if (transform.position.y > 5f)
-        {
-            Destroy(gameObject);
-        }
-        */
-    }
+    
         
 }
