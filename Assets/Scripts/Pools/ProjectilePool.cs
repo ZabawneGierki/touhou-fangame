@@ -8,12 +8,26 @@ public class ProjectilePool : MonoBehaviour
     [SerializeField] private GameObject miniProjectilePrefab;
     [SerializeField] private int poolSize = 20;
     [SerializeField] private float defaultLifetime = 5f;
+    [SerializeField] private float projectileSpeed = 5f;
+    [SerializeField] private float miniProjectileSpeed = 5f;
 
     private Queue<GameObject> projectilePool;
     private Queue<GameObject> miniProjectilePool;
 
+    public static ProjectilePool Instance { get; private set; }
+
     void Awake()
     {
+        // Singleton pattern
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+
+
+
         projectilePool = new Queue<GameObject>(poolSize);
         miniProjectilePool = new Queue<GameObject>(poolSize);
 
@@ -35,6 +49,7 @@ public class ProjectilePool : MonoBehaviour
     {
         var go = Instantiate(prefab);
         go.SetActive(false);
+        go.transform.SetParent(this.transform);
 
         var pooled = go.GetComponent<PooledProjectile>();
         if (pooled == null)
@@ -42,18 +57,28 @@ public class ProjectilePool : MonoBehaviour
 
         pooled.Owner = this;
         pooled.IsMini = isMini;
+
+        // Ensure Rigidbody2D exists and is idle while pooled
+        var rb2d = go.GetComponent<Rigidbody2D>();
+        if (rb2d != null)
+            rb2d.linearVelocity = Vector2.zero;
+
         return go;
     }
 
-    private Queue<GameObject> GetPool(bool isMini) => isMini ? miniProjectilePool : projectilePool;
+    private Queue<GameObject> GetPool(bool isMini)
+    {
+        return isMini ? miniProjectilePool : projectilePool;
+    }
 
     // Spawn a projectile from the pool.
     // position, rotation: where to place the projectile
-    // velocity: optional; if the projectile has a Rigidbody2D it will be set
+    // velocity: optional; if null the projectile will fly upward at a configured speed
     // isMini: choose which prefab/pool to use
     // lifetime: how long until it is returned automatically (falls back to defaultLifetime)
     public GameObject SpawnProjectile(Vector2 position, Quaternion rotation, Vector2? velocity = null, bool isMini = false, float? lifetime = null)
     {
+        Debug.Log("Spawning projectile. IsMini: " + isMini);
         var pool = GetPool(isMini);
         GameObject go = null;
 
@@ -77,7 +102,8 @@ public class ProjectilePool : MonoBehaviour
         var rb2d = go.GetComponent<Rigidbody2D>();
         if (rb2d != null)
         {
-            rb2d.linearVelocity = velocity ?? Vector2.zero;
+            var speed = isMini ? miniProjectileSpeed : projectileSpeed;
+            rb2d.linearVelocity = velocity ?? (Vector2.up * speed);
         }
 
         var pooled = go.GetComponent<PooledProjectile>();
@@ -90,6 +116,12 @@ public class ProjectilePool : MonoBehaviour
     public void ReturnToPool(GameObject go, bool isMini)
     {
         if (go == null) return;
+
+        // reset state
+        var rb2d = go.GetComponent<Rigidbody2D>();
+        if (rb2d != null)
+            rb2d.linearVelocity = Vector2.zero;
+
         go.SetActive(false);
         var pool = GetPool(isMini);
         pool.Enqueue(go);
@@ -126,7 +158,12 @@ public class ProjectilePool : MonoBehaviour
             }
         }
 
-        // Optional: if you want immediate return on collisions, uncomment:
-         private void OnCollisionEnter2D(Collision2D other) => Owner?.ReturnToPool(gameObject, IsMini);
+        // Optional: if you want immediate return on collisions, uncomment the next line:
+        
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            Owner?.ReturnToPool(gameObject, IsMini);
+        }
     }
 }

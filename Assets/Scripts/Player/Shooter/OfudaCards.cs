@@ -5,7 +5,7 @@ using UnityEngine;
 public class OfudaCards : ShootData
 {
     [Header("Shooting")]
-    [SerializeField] GameObject bulletPrefab;
+    
     [SerializeField] float fireRate = 0.09f;
     private Coroutine shootingCoroutine;
     private float nextFireTime = 0f;
@@ -45,11 +45,12 @@ public class OfudaCards : ShootData
 
     private IEnumerator ShootCoroutine()
     {
+        Debug.Log("OfudaCards shooting coroutine started.");
         while (true)
         {
             if (Time.time >= nextFireTime)
             {
-                GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
+                GameObject bullet = ProjectilePool.Instance.SpawnProjectile( shootingPoint.position, Quaternion.identity);
                 // shoot the bullet upwards
                 bullet.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * 20f;
 

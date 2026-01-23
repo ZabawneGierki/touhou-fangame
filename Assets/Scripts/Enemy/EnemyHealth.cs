@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private const string ProjectileTag = "Projectile";
+    
     public int  scoreValue = 10;
     public int maxHealth = 100;
     private int currentHealth;
 
     // string tag for player projectiles
-    private string projectileTag = ProjectileTag;
+    private string projectileTag = "Projectile";
     private string miniProjectileTag = "MiniProjectile";  
 
 
