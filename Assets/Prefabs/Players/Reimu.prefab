@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 2351040993070172688}
   - component: {fileID: 9015546298180208473}
   - component: {fileID: 2500389787142750722}
-  - component: {fileID: 7394188915761420709}
   m_Layer: 8
   m_Name: Reimu
   m_TagString: Player
@@ -289,19 +288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 4428035823236451333}
   currentShootData: {fileID: 11400000, guid: 12b5745604466c746ab25b75878ce146, type: 2}
---- !u!114 &7394188915761420709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608136308966495301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e133bd51ceceec44cbea8c58f1f90947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellCard: {fileID: 11400000, guid: bcac0bdf7688f294cac3997b8e7539e2, type: 2}
 --- !u!1 &4647735970129923604
 GameObject:
   m_ObjectHideFlags: 0
