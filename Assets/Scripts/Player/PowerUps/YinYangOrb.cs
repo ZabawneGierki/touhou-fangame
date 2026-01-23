@@ -8,7 +8,7 @@ public class YinYangOrb : MonoBehaviour
 
      
     [SerializeField] HelperData helperData;
-    [SerializeField] GameObject helperBulletPrefab;
+    //[SerializeField] GameObject helperBulletPrefab;
     [SerializeField] Transform shootingPoint;
     [SerializeField] float fireRate = 0.09f;
 
@@ -101,7 +101,7 @@ public class YinYangOrb : MonoBehaviour
         {
             if (Time.time >= nextFireTime)
             {
-                GameObject bullet = Instantiate(helperBulletPrefab, shootingPoint.position, Quaternion.identity);
+                GameObject bullet = ProjectilePool.Instance.SpawnProjectile(  shootingPoint.position, Quaternion.identity, isMini: true);
                 Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
 
                 if (bulletRb != null)

@@ -100,7 +100,7 @@ public class ProjectilePool : MonoBehaviour
         go.SetActive(true);
 
         var rb2d = go.GetComponent<Rigidbody2D>();
-        if (rb2d != null)
+        if (rb2d != null && isMini == false)
         {
             var speed = isMini ? miniProjectileSpeed : projectileSpeed;
             rb2d.linearVelocity = velocity ?? (Vector2.up * speed);
@@ -159,7 +159,7 @@ public class ProjectilePool : MonoBehaviour
         }
 
         // Optional: if you want immediate return on collisions, uncomment the next line:
-        
+
 
         private void OnTriggerEnter2D(Collider2D other)
         {
