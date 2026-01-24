@@ -78,7 +78,7 @@ public class ProjectilePool : MonoBehaviour
     // lifetime: how long until it is returned automatically (falls back to defaultLifetime)
     public GameObject SpawnProjectile(Vector2 position, Quaternion rotation, Vector2? velocity = null, bool isMini = false, float? lifetime = null)
     {
-        Debug.Log("Spawning projectile. IsMini: " + isMini);
+         
         var pool = GetPool(isMini);
         GameObject go = null;
 
