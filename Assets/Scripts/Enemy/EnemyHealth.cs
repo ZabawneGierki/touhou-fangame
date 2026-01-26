@@ -13,11 +13,13 @@ public class EnemyHealth : MonoBehaviour
     private string projectileTag = "Projectile";
     private string miniProjectileTag = "MiniProjectile";  
 
+    
 
     [SerializeField] GameObject pointPickUp, powerUpPickUp;
     [SerializeField] float spawnRadius = 0.2f; // Radius for randomized spawn locations
 
     private SpriteRenderer spriteRenderer;
+    
 
     private void Start()
     {
@@ -39,20 +41,24 @@ public class EnemyHealth : MonoBehaviour
     }
  
 
-    private void TakeDamage(int v)
+    public void TakeDamage(int v)
     {
         if (currentHealth <= 0)
             Die();
          currentHealth -= v;
-            StartCoroutine(FlashRed());
+
+         StartCoroutine(FlashRed());
     }
 
     private IEnumerator FlashRed()
     {
+
+         
         Color originalColor = spriteRenderer.color;
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = originalColor;
+         
 
     }
 
