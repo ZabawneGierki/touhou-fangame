@@ -1,25 +1,26 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    
-    public int  scoreValue = 10;
+
+    public int scoreValue = 10;
     public int maxHealth = 100;
     private int currentHealth;
 
     // string tag for player projectiles
     private string projectileTag = "Projectile";
-    private string miniProjectileTag = "MiniProjectile";  
+    private string miniProjectileTag = "MiniProjectile";
 
-    
+
 
     [SerializeField] GameObject pointPickUp, powerUpPickUp;
     [SerializeField] float spawnRadius = 0.2f; // Radius for randomized spawn locations
 
+    private Coroutine flashCoroutine; // Add this variable at the top
+
     private SpriteRenderer spriteRenderer;
-    
+
 
     private void Start()
     {
@@ -39,28 +40,35 @@ public class EnemyHealth : MonoBehaviour
             TakeDamage(10); // Assume mini projectiles do 10 damage
         }
     }
- 
+
 
     public void TakeDamage(int v)
     {
-        if (currentHealth <= 0)
-            Die();
-         currentHealth -= v;
+        currentHealth -= v;
 
-         StartCoroutine(FlashRed());
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            if (flashCoroutine != null) StopCoroutine(flashCoroutine);
+            flashCoroutine = StartCoroutine(FlashRed());
+        }
     }
 
     private IEnumerator FlashRed()
     {
 
-         
+
         Color originalColor = spriteRenderer.color;
-        spriteRenderer.color = Color.red;
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0.2f);
         yield return new WaitForSeconds(0.1f);
-        spriteRenderer.color = originalColor;
-         
+        spriteRenderer.color = Color.white;
+
 
     }
+     
 
     private void Die()
     {
@@ -92,6 +100,11 @@ public class EnemyHealth : MonoBehaviour
             Vector3 powerUpPosition = GetRandomSpawnPosition(enemyPosition);
             Instantiate(powerUpPickUp, powerUpPosition, Quaternion.identity);
         }
+    }
+
+    private void ReturnToNormalColor()
+    {
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
     }
 
     private Vector3 GetRandomSpawnPosition(Vector3 centerPosition)
