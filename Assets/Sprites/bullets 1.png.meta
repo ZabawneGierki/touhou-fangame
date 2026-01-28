@@ -5,23 +5,11 @@ TextureImporter:
   - first:
       213: 3395034707990573340
     second: bullets 1_0
-  - first:
-      213: -2358887893263576903
-    second: bullets 1_1
-  - first:
-      213: 2255484620320182490
-    second: bullets 1_2
-  - first:
-      213: 3659414589241072359
-    second: bullets 1_3
-  - first:
-      213: -5585655871330126848
-    second: bullets 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -49,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -67,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -141,94 +129,6 @@ TextureImporter:
       name: bullets 1_0
       rect:
         serializedVersion: 2
-        x: 372
-        y: 358
-        width: 270
-        height: 258
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1176e944169d1f20800000000000000
-      internalID: 3395034707990573340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullets 1_1
-      rect:
-        serializedVersion: 2
-        x: 806
-        y: 183
-        width: 259
-        height: 259
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b01e0185fb834fd0800000000000000
-      internalID: -2358887893263576903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullets 1_2
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 189
-        width: 464
-        height: 467
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad09a86ef471d4f10800000000000000
-      internalID: 2255484620320182490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullets 1_3
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 94
-        width: 96
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ea98953e2ad8c230800000000000000
-      internalID: 3659414589241072359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bullets 1_4
-      rect:
-        serializedVersion: 2
         x: 0
         y: 0
         width: 818
@@ -241,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 004facf3493cb72b0800000000000000
-      internalID: -5585655871330126848
+      spriteID: c1176e944169d1f20800000000000000
+      internalID: 3395034707990573340
       vertices: []
       indices: 
       edges: []
