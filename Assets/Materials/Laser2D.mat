@@ -54,7 +54,7 @@ Material:
     - _Width: 0.2
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.004291006, g: 0.36642763, b: 0.9433596, a: 0}
+    - _Color: {r: 1, g: 0.00298779, b: 0.28061017, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -5,10 +5,21 @@ public class ButtonSelector : MonoBehaviour
 {
 
     [SerializeField] private Button firstButton;
+    [SerializeField] private Slider firstSlider;
 
     private void OnEnable()
     {
-        firstButton.Select();
+        if (firstSlider != null)
+        {
+            firstSlider.Select();
+            return;
+        }
+        else if (firstButton != null)
+        {
+            firstButton.Select();
+        }
+
+
     }
 
 }
