@@ -9,6 +9,7 @@ public class Chapter
     [TextArea] public string description;
     public Wave[] waves;
     public Boss bossPrefab;
+    public MiniBoss miniBossPrefab;
 
 
 }
