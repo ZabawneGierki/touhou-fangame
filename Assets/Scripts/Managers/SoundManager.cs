@@ -76,6 +76,28 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning($"SoundClip with name '{name}' not found!");
         }
     }
+    public void PlayMusicByName(ClipName name)
+    {
+        SoundClip soundClip = soundClips.Find(clip => clip.name == name);
+        if (soundClip != null)
+        {
+            PlayMusic(soundClip.Clip);
+        }
+        else
+        {
+            Debug.LogWarning($"SoundClip with name '{name}' not found!");
+        }
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        EffectsSource.volume = volume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        MusicSource.volume = volume;
+    }
 
 
 }

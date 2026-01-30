@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Localization.Settings;
 
 public class SettingsScript : MonoBehaviour
@@ -7,12 +7,14 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] private TMP_Dropdown languageDropdown;
     public void OnChangeMusicVolume(float volume)
     {
-        PlayerPrefs.SetFloat("MusicVolume", volume);
+
+        SoundManager.Instance.SetMusicVolume(volume);
     }
 
     public void OnChangeSFXVolume(float volume)
     {
-        PlayerPrefs.SetFloat("SFXVolume", volume);
+
+        SoundManager.Instance.SetSFXVolume(volume);
     }
 
     public void OnChangeLanguage()

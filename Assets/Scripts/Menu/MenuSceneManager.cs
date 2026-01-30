@@ -146,6 +146,13 @@ public class MenuSceneManager : MonoBehaviour
 
     private void GoBack(InputAction.CallbackContext context)
     {
+        // prevent going back if on Main Menu
+        if(currentActiveScene.sceneName == MenuScene.MainMenu)
+        {
+            return;
+        }
+
+
         if (isTransitioning || sceneHistory.Count <= 1) return;
 
         sceneHistory.Pop();
@@ -156,8 +163,15 @@ public class MenuSceneManager : MonoBehaviour
     }
     public void CloseGame() => Application.Quit();
 
-    public void ShowMainMenu() => ShowMenuScene(MenuScene.MainMenu);
+    public void ShowMainMenu() { 
+        ShowMenuScene(MenuScene.MainMenu);
+         
+
+
+    }
     public void ShowOptions() => ShowMenuScene(MenuScene.Options);
     public void ShowDifficulty() => ShowMenuScene(MenuScene.Difficulty);
     public void ShowCharacterSelect() => ShowMenuScene(MenuScene.CharacterSelect);
+
+
 }
