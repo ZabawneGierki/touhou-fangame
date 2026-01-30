@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     private int currentChapterIndex = 0;    
 
+    public bool canContinue = false; // for miniboss.
 
 
     [SerializeField] Chapter[] chapters;
@@ -63,10 +64,20 @@ public class EnemySpawner : MonoBehaviour
             yield return null;
         }
         fadeCanvas.alpha = 0;
+
+        int WaveCounter = 0;
         // Play each wave in the chapter
         foreach (var wave in chapter.waves)
         {
             yield return StartCoroutine(wave.Play());
+            WaveCounter++;
+            if(WaveCounter == 10 && chapter.miniBossPrefab != null)
+            {
+                yield return StartCoroutine(HandleMiniBoss(chapter));
+            }
+
+
+
         }
         // After all waves, spawn the boss
         if (chapter.bossPrefab != null)
@@ -88,6 +99,20 @@ public class EnemySpawner : MonoBehaviour
             // Handle end of game scenario here
             SceneManager.LoadScene("Ending");
         }
+    }
+
+
+    private IEnumerator HandleMiniBoss(Chapter chapter)
+    {
+        canContinue = false;
+        if (chapter.miniBossPrefab != null)
+        {
+            Instantiate(chapter.miniBossPrefab, transform.position, Quaternion.identity);
+        }
+
+        yield return new WaitUntil(() => canContinue);
+
+
     }
 
 
