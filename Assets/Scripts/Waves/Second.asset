@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Second
   m_EditorClassIdentifier: 
   waveName: Fala Statyczna
-  timeAfterThisWave: 10
+  timeAfterThisWave: 3
   enemyPrefab: {fileID: 6629203635037854660, guid: 56f306f1a1395f14ea0cc28760ac3b1e, type: 3}
   spawnPoints:
   - {fileID: 1465224687143937241, guid: 73d32da276de6fd49aa3c0aa49eef168, type: 3}

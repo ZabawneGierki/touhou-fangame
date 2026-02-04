@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 5923912900172361513}
-  currentShootData: {fileID: 11400000, guid: 12b5745604466c746ab25b75878ce146, type: 2}
+  currentShootData: {fileID: 11400000, guid: f98dfb087553ddd41b8e6a402ca8f637, type: 2}
 --- !u!1 &7661199607872412794
 GameObject:
   m_ObjectHideFlags: 0

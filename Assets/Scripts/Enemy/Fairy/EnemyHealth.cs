@@ -74,6 +74,13 @@ public class EnemyHealth : MonoBehaviour
     {
         Score.instance.AddScore(scoreValue);
         SpawnItems();
+
+        // if the enemy has a YinYangEnemy component, call its Destroy method
+        YinYangEnemy yinYangEnemy = GetComponent<YinYangEnemy>();
+        if (yinYangEnemy != null)
+        {
+            yinYangEnemy.Destroy();
+        }
         // Add death effects here (e.g., play animation, sound, etc.)
         Destroy(gameObject);
     }
