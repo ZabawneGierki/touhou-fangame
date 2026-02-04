@@ -49,6 +49,7 @@ public class MasterSpark : ShootData
         int counter = 0;
         while (true)
         {
+            counter++;
             yield return new WaitForSeconds(1f);
             Debug.Log("Counter: " + counter);
 
