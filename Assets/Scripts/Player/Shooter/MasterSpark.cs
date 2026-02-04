@@ -1,59 +1,79 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
+ 
+ 
 
 [CreateAssetMenu(fileName = "MasterSpark", menuName = "Scriptable Objects/Shooters/MasterSpark")]
 public class MasterSpark : ShootData
 {
+    [Header("Laser Settings")]
+    public float damagePerSecond = 10f;
     public float maxDistance = 20f;
-    public float damagePerSecond = 25f;
-    public LayerMask hitMask;
-    public LineRenderer linePrefab;
-    public ParticleSystem hitParticlesPrefab;
+    public LayerMask enemyLayer;
+    public Material laserMaterial;
+    public float laserWidth = 0.1f;
 
-    private Coroutine shootingCoroutine;
-
+    private LineRenderer currentLaser;
+    private Coroutine shootRoutine;
     public override void StartShooting(GameObject player)
     {
-        if (shootingCoroutine == null)
+        // 1. Setup the Line Renderer if it doesn't exist
+        if (currentLaser == null)
         {
-             
-            // Fix: Get MonoBehaviour from player to start coroutine
-            if (player.TryGetComponent<MonoBehaviour>(out var mono))
-            {
-                shootingCoroutine = mono.StartCoroutine(ShootSpark());
-            }
-            else
-            {
-                Debug.LogError("Player GameObject does not have a MonoBehaviour to start coroutine.");
-            }
+            GameObject laserObj = new GameObject("Laser_Effect");
+            currentLaser = laserObj.AddComponent<LineRenderer>();
+            currentLaser.material = laserMaterial;
+            currentLaser.startWidth = laserWidth;
+            currentLaser.endWidth = laserWidth;
+            currentLaser.useWorldSpace = true;
         }
 
+        currentLaser.enabled = true;
+
+        // 2. Start the shooting logic loop
+        var playerMono = player.GetComponent<MonoBehaviour>();
+        if (shootRoutine != null && playerMono != null) playerMono.StopCoroutine(shootRoutine);
+        if (playerMono != null) shootRoutine = playerMono.StartCoroutine(UpdateLaser(player));
     }
 
     public override void StopShooting(GameObject player)
     {
-        if (shootingCoroutine != null)
-        {
-            if (player.TryGetComponent<MonoBehaviour>(out var mono))
-            {
-                mono.StopCoroutine(shootingCoroutine);
-            }
-            shootingCoroutine = null;
-        }
-
+        if (currentLaser != null) currentLaser.enabled = false;
+        var playerMono = player.GetComponent<MonoBehaviour>();
+        if (shootRoutine != null && playerMono != null) playerMono.StopCoroutine(shootRoutine);
     }
 
-    private IEnumerator ShootSpark()
+    private IEnumerator UpdateLaser(GameObject player)
     {
-        int counter = 0;
         while (true)
         {
-            counter++;
-            yield return new WaitForSeconds(1f);
-            Debug.Log("Counter: " + counter);
+            Vector2 origin = shootingPoint.position;
+            Vector2 direction = shootingPoint.up; // "Upwards" relative to the gun
 
+            RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, enemyLayer);
+
+            currentLaser.SetPosition(0, origin);
+
+            if (hit.collider != null)
+            {
+                // Stop the laser at the enemy
+                currentLaser.SetPosition(1, hit.point);
+
+                // Damage logic: Look for a script on the enemy (e.g., "EnemyHealth")
+                // Replace 'EnemyHealth' with your actual enemy script name
+                var enemy = hit.collider.GetComponent<EnemyHealth>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damagePerSecond * Time.deltaTime);
+                }
+            }
+            else
+            {
+                // No hit: Extend laser to max distance
+                currentLaser.SetPosition(1, origin + direction * maxDistance);
+            }
+
+            yield return null; // Wait for next frame
         }
-        
     }
 }

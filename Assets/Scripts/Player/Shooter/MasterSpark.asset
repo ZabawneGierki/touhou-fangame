@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d94ec2400bf04648858b25ec6984236, type: 3}
   m_Name: MasterSpark
   m_EditorClassIdentifier: 
-  line: {fileID: 6075159803907902132, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
+  damagePerSecond: 25
+  maxDistance: 20
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
+  laserWidth: 0.1

@@ -42,9 +42,9 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage(int v)
+    public void TakeDamage(float v)
     {
-        currentHealth -= v;
+        currentHealth -= (int)v;
 
         if (currentHealth <= 0)
         {
