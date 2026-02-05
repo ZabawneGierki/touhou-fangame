@@ -39,7 +39,7 @@ public class SparkInstance : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, enemyLayer);
         lineRenderer.SetPosition(0, origin);
-
+        
         if (hit.collider != null)
         {
             lineRenderer.SetPosition(1, hit.point);
