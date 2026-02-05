@@ -312,33 +312,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6985034919369227780, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 40110301}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
 --- !u!4 &40110299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3516372413197376864, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
   m_PrefabInstance: {fileID: 40110298}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &40110300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6985034919369227780, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
-  m_PrefabInstance: {fileID: 40110298}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &40110301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40110300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c79440de14d6449a4919615fecaa75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &44513136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,7 +2510,6 @@ MonoBehaviour:
   poolSize: 40
   defaultLifetime: 5
   projectileSpeed: 5
-  miniProjectileSpeed: 5
 --- !u!1 &463856484
 GameObject:
   m_ObjectHideFlags: 0
