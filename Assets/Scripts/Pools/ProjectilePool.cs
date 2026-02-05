@@ -9,7 +9,7 @@ public class ProjectilePool : MonoBehaviour
     [SerializeField] private int poolSize = 20;
     [SerializeField] private float defaultLifetime = 5f;
     [SerializeField] private float projectileSpeed = 5f;
-    [SerializeField] private float miniProjectileSpeed = 5f;
+     
 
     private Queue<GameObject> projectilePool;
     private Queue<GameObject> miniProjectilePool;
