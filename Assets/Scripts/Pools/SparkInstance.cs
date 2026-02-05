@@ -11,7 +11,7 @@ public class SparkInstance : MonoBehaviour
 
     void Awake()
     {
-        lineRenderer = GetComponentInChildren<LineRenderer>();
+        lineRenderer = GetComponent<LineRenderer>();
     }
 
     public void Setup(Transform origin, float damage, float dist, LayerMask mask)
@@ -39,7 +39,7 @@ public class SparkInstance : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, enemyLayer);
         lineRenderer.SetPosition(0, origin);
-        
+
         if (hit.collider != null)
         {
             lineRenderer.SetPosition(1, hit.point);
