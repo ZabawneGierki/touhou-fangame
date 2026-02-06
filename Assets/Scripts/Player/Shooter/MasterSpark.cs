@@ -10,7 +10,7 @@ public class MasterSpark : ShootData
     public float maxDistance = 50f;
     public LayerMask enemyLayer;
 
-    private LaserInstance activeLaser;
+    private SparkInstance activeLaser;
 
     public override void StartShooting(GameObject player)
     {
@@ -20,7 +20,7 @@ public class MasterSpark : ShootData
             return;
         }
 
-        if (LaserPool.Instance == null)
+        if (SparkPool.Instance == null)
         {
             Debug.LogError("Laser failed: No LaserPool found in the scene!");
             return;
@@ -28,7 +28,7 @@ public class MasterSpark : ShootData
 
         if (activeLaser == null)
         {
-            activeLaser = LaserPool.Instance.GetLaser();
+            activeLaser = SparkPool.Instance.GetLaser();
             if (activeLaser != null)
             {
                 Debug.Log("Laser spawned successfully!");

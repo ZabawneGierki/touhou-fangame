@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class LaserPool : MonoBehaviour
+public class SparkPool : MonoBehaviour
 {
-    public static LaserPool Instance; // Singleton for easy access
+    public static SparkPool Instance; // Singleton for easy access
     public GameObject laserPrefab;
     public int poolSize = 5;
 

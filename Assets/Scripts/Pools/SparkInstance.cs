@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LaserInstance : MonoBehaviour
+public class SparkInstance : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private Transform originPoint;
