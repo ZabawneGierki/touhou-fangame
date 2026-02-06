@@ -8,7 +8,7 @@ public class ProjectilePool : MonoBehaviour
     [SerializeField] private GameObject miniProjectilePrefab;
     [SerializeField] private int poolSize = 20;
     [SerializeField] private float defaultLifetime = 5f;
-    [SerializeField] private float projectileSpeed = 5f;
+   
      
 
     private Queue<GameObject> projectilePool;

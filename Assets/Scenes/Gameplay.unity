@@ -3055,7 +3055,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 858617384}
   players:
   - {fileID: 608136308966495301, guid: 514fe64760521eb43a555f302984e0b7, type: 3}
-  - {fileID: 3033050302302721623, guid: 028e2f8351bcacb4b92868330c85a982, type: 3}
+  - {fileID: 2161115684731610448, guid: 028e2f8351bcacb4b92868330c85a982, type: 3}
   - {fileID: 530006199898154842, guid: eeb6b44ba0de7df49ad487f9b51ce34d, type: 3}
   continueScreenPrefab: {fileID: 510752518}
   chapterEndScreenPrefab: {fileID: 1971497532}
@@ -5456,10 +5456,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148232004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdb93c3c4d6ee954a91a0421efdef382, type: 3}
+  m_Script: {fileID: 11500000, guid: 34a484381785d4045938be8ba2a55edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 6985034919369227780, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
+  laserPrefab: {fileID: 61591454610454267, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
   poolSize: 5
 --- !u!1 &1151781453
 GameObject:

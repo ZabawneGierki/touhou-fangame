@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SparkInstance : MonoBehaviour
+public class LaserInstance : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private Transform originPoint;
@@ -12,7 +12,6 @@ public class SparkInstance : MonoBehaviour
     void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        
     }
 
     public void Setup(Transform origin, float damage, float dist, LayerMask mask)
@@ -33,7 +32,6 @@ public class SparkInstance : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("SparkInstance Update called. isActive: " + isActive);
         if (!isActive || originPoint == null) return;
 
         Vector2 origin = originPoint.position;

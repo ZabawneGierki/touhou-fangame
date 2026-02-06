@@ -5,8 +5,8 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public int scoreValue = 10;
-    public int maxHealth = 100;
-    private int currentHealth;
+    public float maxHealth = 100;
+    private float currentHealth;
 
     // string tag for player projectiles
     private string projectileTag = "Projectile";
@@ -44,7 +44,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float v)
     {
-        currentHealth -= (int)v;
+        currentHealth -= v;
+        Debug.Log($"Enemy took {v} damage, current health: {currentHealth}");
 
         if (currentHealth <= 0)
         {

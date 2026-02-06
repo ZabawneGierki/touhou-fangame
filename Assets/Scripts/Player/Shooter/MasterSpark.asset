@@ -17,5 +17,3 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
-  laserWidth: 0.1

@@ -6,74 +6,48 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "MasterSpark", menuName = "Scriptable Objects/Shooters/MasterSpark")]
 public class MasterSpark : ShootData
 {
-    [Header("Laser Settings")]
-    public float damagePerSecond = 10f;
-    public float maxDistance = 20f;
+    public float damagePerSecond = 20f;
+    public float maxDistance = 50f;
     public LayerMask enemyLayer;
-    public Material laserMaterial;
-    public float laserWidth = 0.1f;
 
-    private LineRenderer currentLaser;
-    private Coroutine shootRoutine;
+    private LaserInstance activeLaser;
+
     public override void StartShooting(GameObject player)
     {
-        // 1. Setup the Line Renderer if it doesn't exist
-        if (currentLaser == null)
+        if (shootingPoint == null)
         {
-            GameObject laserObj = new GameObject("Laser_Effect");
-            currentLaser = laserObj.AddComponent<LineRenderer>();
-            currentLaser.material = laserMaterial;
-            currentLaser.startWidth = laserWidth;
-            currentLaser.endWidth = laserWidth;
-            currentLaser.useWorldSpace = true;
+            Debug.LogError("Laser failed: shootingPoint is null! Did you call SetUpShootingPoint?");
+            return;
         }
 
-        currentLaser.enabled = true;
+        if (LaserPool.Instance == null)
+        {
+            Debug.LogError("Laser failed: No LaserPool found in the scene!");
+            return;
+        }
 
-        // 2. Start the shooting logic loop
-        var playerMono = player.GetComponent<MonoBehaviour>();
-        if (shootRoutine != null && playerMono != null) playerMono.StopCoroutine(shootRoutine);
-        if (playerMono != null) shootRoutine = playerMono.StartCoroutine(UpdateLaser(player));
+        if (activeLaser == null)
+        {
+            activeLaser = LaserPool.Instance.GetLaser();
+            if (activeLaser != null)
+            {
+                Debug.Log("Laser spawned successfully!");
+                activeLaser.Setup(shootingPoint, damagePerSecond, maxDistance, enemyLayer);
+            }
+            else
+            {
+                Debug.LogWarning("Laser failed: Pool is empty!");
+            }
+        }
     }
 
     public override void StopShooting(GameObject player)
     {
-        if (currentLaser != null) currentLaser.enabled = false;
-        var playerMono = player.GetComponent<MonoBehaviour>();
-        if (shootRoutine != null && playerMono != null) playerMono.StopCoroutine(shootRoutine);
-    }
-
-    private IEnumerator UpdateLaser(GameObject player)
-    {
-        while (true)
+        if (activeLaser != null)
         {
-            Vector2 origin = shootingPoint.position;
-            Vector2 direction = shootingPoint.up; // "Upwards" relative to the gun
-
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, enemyLayer);
-
-            currentLaser.SetPosition(0, origin);
-
-            if (hit.collider != null)
-            {
-                // Stop the laser at the enemy
-                currentLaser.SetPosition(1, hit.point);
-
-                // Damage logic: Look for a script on the enemy (e.g., "EnemyHealth")
-                // Replace 'EnemyHealth' with your actual enemy script name
-                var enemy = hit.collider.GetComponent<EnemyHealth>();
-                if (enemy != null)
-                {
-                    enemy.TakeDamage(damagePerSecond * Time.deltaTime);
-                }
-            }
-            else
-            {
-                // No hit: Extend laser to max distance
-                currentLaser.SetPosition(1, origin + direction * maxDistance);
-            }
-
-            yield return null; // Wait for next frame
+            activeLaser.Deactivate();
+            activeLaser.gameObject.SetActive(false);
+            activeLaser = null;
         }
     }
 }
