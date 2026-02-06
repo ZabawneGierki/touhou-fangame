@@ -5486,6 +5486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148232005}
+  - component: {fileID: 1148232006}
   m_Layer: 0
   m_Name: LineRendererPool
   m_TagString: Untagged
@@ -5509,6 +5510,20 @@ Transform:
   - {fileID: 40110299}
   m_Father: {fileID: 1393606736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148232006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148232004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb93c3c4d6ee954a91a0421efdef382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 0}
+  poolSize: 5
 --- !u!1 &1151781453
 GameObject:
   m_ObjectHideFlags: 0
