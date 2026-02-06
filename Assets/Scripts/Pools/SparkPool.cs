@@ -7,7 +7,7 @@ public class SparkPool : MonoBehaviour
     public GameObject laserPrefab;
     public int poolSize = 5;
 
-    private List<LaserInstance> pool = new List<LaserInstance>();
+    private List<SparkInstance> pool = new List<SparkInstance>();
 
     void Awake()
     {
@@ -15,7 +15,7 @@ public class SparkPool : MonoBehaviour
         for (int i = 0; i < poolSize; i++)
         {
             GameObject obj = Instantiate(laserPrefab, transform);
-            LaserInstance laser = obj.GetComponent<LaserInstance>();
+            SparkInstance laser = obj.GetComponent<SparkInstance>();
 
             // FIX: Actually disable the GameObject so the pool can find it
             obj.SetActive(false);
@@ -24,7 +24,7 @@ public class SparkPool : MonoBehaviour
         }
     }
 
-    public LaserInstance GetLaser()
+    public SparkInstance GetLaser()
     {
         foreach (var laser in pool)
         {
