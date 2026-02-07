@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &153433801845038432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5460036247676944366}
+  m_Layer: 0
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5460036247676944366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153433801845038432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2939815930265471510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8616376987949752362
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,10 +59,11 @@ Transform:
   m_GameObject: {fileID: 8616376987949752362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.548, y: -4.517, z: 0}
-  m_LocalScale: {x: 0.367, y: 0.2559, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5460036247676944366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3446377396454310171
@@ -101,10 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9da738d227333f4794ee8dbd1c93c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserLineRenderer: {fileID: 5984204196908575201}
-  laserOrigin: {fileID: 2939815930265471510}
-  laserSpeed: 50
-  maxLaserDistance: 100
   laserColors:
   - {r: 0, g: 1, b: 0.10499692, a: 0}
   - {r: 0.9062743, g: 1, b: 0, a: 0}
@@ -114,6 +142,11 @@ MonoBehaviour:
   - {r: 0, g: 0.09069872, b: 1, a: 0}
   - {r: 0.0141509175, g: 1, b: 0.8132109, a: 0}
   laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
+  laserData: {fileID: 11400000, guid: 898c8a5ab7c2e114ab93cb013ea14398, type: 2}
+  shootingPoint: {fileID: 5460036247676944366}
+  followSpeed: 10
+  offsetFromPlayer: {x: 0, y: 0}
+  sideAngle: 30
 --- !u!120 &5984204196908575201
 LineRenderer:
   serializedVersion: 2
