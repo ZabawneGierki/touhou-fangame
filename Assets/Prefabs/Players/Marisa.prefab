@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helpersParent: {fileID: 440428848415229075}
-  powerUpData: {fileID: 11400000, guid: 9bc3f751e375a1d4eb9e90bb841afc58, type: 2}
+  powerUpData: {fileID: 11400000, guid: 6024f541e134744429417890901bc5e1, type: 2}
 --- !u!114 &6754290600034854334
 MonoBehaviour:
   m_ObjectHideFlags: 0

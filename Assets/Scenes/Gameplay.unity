@@ -2447,7 +2447,6 @@ MonoBehaviour:
   miniProjectilePrefab: {fileID: 3385209665230002495, guid: 70224e536be0dc14fa192eeec28de599, type: 3}
   poolSize: 40
   defaultLifetime: 5
-  projectileSpeed: 5
 --- !u!1 &463856484
 GameObject:
   m_ObjectHideFlags: 0
@@ -9261,10 +9260,6 @@ PrefabInstance:
     - target: {fileID: 8616376987949752362, guid: 7d16e5f221712f34599504d578179e79, type: 3}
       propertyPath: m_Name
       value: Hakkero
-      objectReference: {fileID: 0}
-    - target: {fileID: 8616376987949752362, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
