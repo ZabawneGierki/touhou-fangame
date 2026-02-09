@@ -1,5 +1,11 @@
 using UnityEngine;
 
+public enum Direction
+{
+    
+    Left,
+    Right
+}
 public class SparkInstance : MonoBehaviour
 {
     private LineRenderer lineRenderer;
@@ -12,6 +18,15 @@ public class SparkInstance : MonoBehaviour
     void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    public void SetDirection(Direction dir)
+    {
+        // Adjust the rotation based on the direction 30 degrees to the left or right
+        float angle = (dir == Direction.Left) ? -30f : 30f;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+
+
     }
 
     public void Setup(Transform origin, float damage, float dist, LayerMask mask)

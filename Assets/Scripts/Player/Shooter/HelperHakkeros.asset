@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d94ec2400bf04648858b25ec6984236, type: 3}
   m_Name: HelperHakkeros
   m_EditorClassIdentifier: 
-  damagePerSecond: 20
+  damagePerSecond: 10
   maxDistance: 50
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64

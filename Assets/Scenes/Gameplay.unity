@@ -5460,6 +5460,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 61591454610454267, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
   poolSize: 5
+  laserColors:
+  - {r: 0.9528302, g: 0.022472408, b: 0.022472408, a: 0}
+  - {r: 1, g: 0, b: 0.4713459, a: 0}
+  - {r: 0.55581, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0.030314207, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0.9898968, a: 0}
+  - {r: 0, g: 1, b: 0.011921406, a: 0}
+  - {r: 1, g: 0.8780921, b: 0, a: 0}
+  laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
 --- !u!1 &1151781453
 GameObject:
   m_ObjectHideFlags: 0
@@ -9209,63 +9218,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2137522593846873054, guid: 63ff81d776498ec42b3678bd34ee72e0, type: 3}
   m_PrefabInstance: {fileID: 2985745808338614824}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1938064154
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939815930265471510, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8616376987949752362, guid: 7d16e5f221712f34599504d578179e79, type: 3}
-      propertyPath: m_Name
-      value: Hakkero
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7d16e5f221712f34599504d578179e79, type: 3}
 --- !u!1 &1942067443
 GameObject:
   m_ObjectHideFlags: 0
@@ -10771,4 +10723,3 @@ SceneRoots:
   - {fileID: 993437748}
   - {fileID: 519420032}
   - {fileID: 79538193}
-  - {fileID: 1938064154}

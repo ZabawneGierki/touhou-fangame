@@ -14,7 +14,7 @@ public class YinYangOrbs : PowerUpData
     [SerializeField] private OrbData[] helpers;
     public override void PowerUp(Transform t, int level)
     {
-        Vector3 offset = new Vector3(helpers[level].positionOffset.x, helpers[level].positionOffset.y, 0f);
+        Vector3 offset = new(helpers[level].positionOffset.x, helpers[level].positionOffset.y, 0f);
         GameObject helper = Object.Instantiate(helpers[level].helper.gameObject, t.position + offset, Quaternion.identity);
         helper.transform.parent = t;
         
