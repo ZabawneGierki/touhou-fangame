@@ -10,6 +10,7 @@ public class Hakkero : MonoBehaviour
     [SerializeField] ShootData shootData;
     [SerializeField] Transform shootingPoint;
 
+    private Direction currentDirection = Direction.Right; // Default direction, can be set by the player or other logic
     private void Start()
     {
         // Instantiate the ScriptableObject so runtime state (like activeLaser or shootingPoint)
@@ -24,6 +25,9 @@ public class Hakkero : MonoBehaviour
             Debug.LogWarning("Hakkero: shootData is null.");
         }
     }
+
+
+     
 
     private IEnumerator ChangeLaserColorRoutine()
     {
@@ -45,6 +49,12 @@ public class Hakkero : MonoBehaviour
             }
             colorIndex = (colorIndex + 1) % laserColors.Length;
         }
+    }
+
+    public void SetDirection(Direction direction)
+    {
+        currentDirection = direction;
+
     }
 
     private void OnEnable()

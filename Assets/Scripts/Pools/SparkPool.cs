@@ -48,7 +48,9 @@ public class SparkPool : MonoBehaviour
         return null;
     }
 
-    public SparkInstance GetLaser(Direction direction)
+    // Overloaded method to get a laser with a specified direction
+
+    public SparkInstance GetLaser(Direction dir)
     {
         foreach (var laser in pool)
         {
@@ -57,14 +59,15 @@ public class SparkPool : MonoBehaviour
             {
                 laser.gameObject.SetActive(true);
                 SparkInstance sparkInstance = laser.GetComponent<SparkInstance>();
-                sparkInstance.SetDirection(direction);
+                sparkInstance.SetDirection(dir);
                 return laser;
             }
         }
         Debug.LogWarning("Pool is full! No inactive lasers found.");
         return null;
-
     }
+
+     
 
     private IEnumerator ChangeLaserColorRoutine()
     {

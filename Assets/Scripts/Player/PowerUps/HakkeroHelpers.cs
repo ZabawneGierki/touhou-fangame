@@ -16,6 +16,8 @@ public class HakkeroHelpers : PowerUpData
     {
         Vector3 offset = new(helpers[level].positionOffset.x, helpers[level].positionOffset.y, 0f);
         GameObject helper = Object.Instantiate(helpers[level].helper.gameObject, t.position + offset, Quaternion.identity);
+        
+
         helper.transform.parent = t;
     }
 }
