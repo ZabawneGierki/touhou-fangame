@@ -28,6 +28,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     public List<SoundClip> soundClips;
 
+    [SerializeField]
+    private List<ClipName> BackgroundMusic = new List<ClipName>(5);
+    [SerializeField]
+    private List<ClipName> EndingMusic = new List<ClipName>(5);
+
     // Initialize the singleton instance.
     private void Awake()
     {
@@ -47,7 +52,29 @@ public class SoundManager : MonoBehaviour
     }
 
 
+    public void PlayBackgroundMusic(int ChapterIndex)
+    {
+        if (ChapterIndex < BackgroundMusic.Count)
+        {
+            PlayMusicByName(BackgroundMusic[ChapterIndex]);
+        }
+        else
+        {
+            Debug.LogWarning($"No background music found for chapter index {ChapterIndex}!");
+        }
+    }
 
+    public void PlayEndingMusic(int EndingIndex)
+    {
+        if (EndingIndex < EndingMusic.Count)
+        {
+            PlayMusicByName(EndingMusic[EndingIndex]);
+        }
+        else
+        {
+            Debug.LogWarning($"No ending music found for ending index {EndingIndex}!");
+        }
+    }
 
     // Play a single clip through the sound effects source.
     private void Play(AudioClip clip)

@@ -22,12 +22,12 @@ public class PlayerAnimation : MonoBehaviour
        if (rb.linearVelocity.x  > 0)
         {
             anim.SetBool(isMoving, true);
-            sr.flipX = false;
+            sr.flipX = true;
         }
         else if (rb.linearVelocity.x < 0)
         {
             anim.SetBool(isMoving, true);
-            sr.flipX = true;
+            sr.flipX = false;
         }
         else
         {
