@@ -7,23 +7,31 @@ public class Hakkero : MonoBehaviour
 {
     [SerializeField] Color[] laserColors;
     [SerializeField] Material laserMaterial;
-    [SerializeField] ShootData shootData;
+    
     [SerializeField] Transform shootingPoint;
 
-    private Direction currentDirection = Direction.Right; // Default direction, can be set by the player or other logic
+    LineRenderer lineRenderer;
+
+    private Direction currentDirection; // Default direction, can be set by the player or other logic
+
+
+    private void Awake()
+    {
+        lineRenderer = GetComponent<LineRenderer>();
+    }
     private void Start()
     {
-        // Instantiate the ScriptableObject so runtime state (like activeLaser or shootingPoint)
-        // is not shared between multiple helper instances that use the same asset.
-        if (shootData != null)
+        GameObject player = GameObject.FindWithTag("Player");
+        if(player != null)
         {
-            shootData = Instantiate(shootData);
-            shootData.SetUpShootingPoint(transform);
+            Debug.Log("Player found!");
         }
         else
         {
-            Debug.LogWarning("Hakkero: shootData is null.");
+            Debug.LogWarning("Player not found.");
+             
         }
+
     }
 
 
@@ -51,11 +59,7 @@ public class Hakkero : MonoBehaviour
         }
     }
 
-    public void SetDirection(Direction direction)
-    {
-        currentDirection = direction;
-
-    }
+   
 
     private void OnEnable()
     {
@@ -86,11 +90,11 @@ public class Hakkero : MonoBehaviour
 
     private void OnStopShooting(InputAction.CallbackContext context)
     {
-        shootData.StopShooting(this.gameObject);
+        
     }
 
     private void OnStartShooting(InputAction.CallbackContext context)
     {
-        shootData.StartShooting(this.gameObject);
+        
     }
 }
