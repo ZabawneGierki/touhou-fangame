@@ -12,7 +12,7 @@ public class Hakkero : MonoBehaviour
 
     LineRenderer lineRenderer;
 
-    private Direction currentDirection; // Default direction, can be set by the player or other logic
+    public Direction currentDirection; // Default direction, can be set by the player or other logic
 
 
     private void Awake()
@@ -24,7 +24,14 @@ public class Hakkero : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         if(player != null)
         {
-            Debug.Log("Player found!");
+           if(transform.position.x < player.transform.position.x)
+            {
+                currentDirection = Direction.Right;
+            }
+            else
+            {
+                currentDirection = Direction.Left;
+            }
         }
         else
         {
@@ -37,27 +44,7 @@ public class Hakkero : MonoBehaviour
 
      
 
-    private IEnumerator ChangeLaserColorRoutine()
-    {
-        // change laser color every 0.5 seconds gradually
-        int colorIndex = 0;
-        while (true)
-        {
-            Color startColor = laserColors[colorIndex];
-            Color endColor = laserColors[(colorIndex + 1) % laserColors.Length];
-            float transitionDuration = 0.5f;
-            float elapsed = 0f;
-            while (elapsed < transitionDuration)
-            {
-                elapsed += Time.deltaTime;
-                float t = Mathf.Clamp01(elapsed / transitionDuration);
-                Color currentColor = Color.Lerp(startColor, endColor, t);
-                laserMaterial.color = currentColor;
-                yield return null;
-            }
-            colorIndex = (colorIndex + 1) % laserColors.Length;
-        }
-    }
+     
 
    
 
