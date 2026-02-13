@@ -47,6 +47,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator PlayChapter(int chapterIndex)
     {
+        SoundManager.Instance.PlayBackgroundMusic(PlayerData.currentChapter);
         Chapter chapter = chapters[chapterIndex];
         // Display chapter title and description
         titleText.text = chapter.title;
@@ -89,6 +90,7 @@ public class EnemySpawner : MonoBehaviour
     public void StartNextChapter()
     {
         currentChapterIndex++;
+        PlayerData.currentChapter = currentChapterIndex;
         if (currentChapterIndex < chapters.Length)
         {
             StartCoroutine(PlayChapter(currentChapterIndex));

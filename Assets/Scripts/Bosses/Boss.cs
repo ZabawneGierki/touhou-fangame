@@ -23,7 +23,8 @@ public class Boss : MonoBehaviour
     [SerializeField] List<Phase> phases = new List<Phase>();
 
 
-    public int bossIndex = 0; // for multiple bosses in a level
+    public int bossIndex = 0;  
+    
     // runtime state
     private int currentPhaseIndex = 0;
     Coroutine currentPhaseCoroutine;
@@ -44,7 +45,8 @@ public class Boss : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(centerOfScreen, 1.3f).SetEase(Ease.InOutSine));
         sequence.AppendCallback(PlayDialogue);
-
+        SoundManager.Instance.PlayEndingMusic(PlayerData.currentChapter);
+         
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
 
