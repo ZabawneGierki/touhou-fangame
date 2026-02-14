@@ -7,7 +7,7 @@ public class MasterSpark : ShootData
     [Header("Laser Settings")]
     [SerializeField] private float maxLaserLength = 20f;
     [SerializeField] private float damagePerSecond = 50f;
-    [SerializeField] private float laserWidth = 0.3f;
+    [SerializeField] private float laserWidth = 0.02f;
     [SerializeField] private LayerMask enemyLayer;
 
     [Header("Visuals")]

@@ -5414,61 +5414,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7850925392004492063, guid: 1901522b9fcf323479e239580717b15a, type: 3}
   m_PrefabInstance: {fileID: 532252571047463021}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1148232004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1148232005}
-  - component: {fileID: 1148232006}
-  m_Layer: 0
-  m_Name: LineRendererPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1148232005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148232004}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1393606736}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1148232006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148232004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a484381785d4045938be8ba2a55edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 61591454610454267, guid: d33078e7acf5f2a4189facc1a533f017, type: 3}
-  poolSize: 5
-  laserColors:
-  - {r: 0.9528302, g: 0.022472408, b: 0.022472408, a: 0}
-  - {r: 1, g: 0, b: 0.4713459, a: 0}
-  - {r: 0.55581, g: 0, b: 1, a: 0}
-  - {r: 0, g: 0.030314207, b: 1, a: 0}
-  - {r: 0, g: 1, b: 0.9898968, a: 0}
-  - {r: 0, g: 1, b: 0.011921406, a: 0}
-  - {r: 1, g: 0.8780921, b: 0, a: 0}
-  laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
 --- !u!1 &1151781453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,7 +6761,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 460355628}
-  - {fileID: 1148232005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420936588
