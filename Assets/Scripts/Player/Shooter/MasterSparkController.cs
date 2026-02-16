@@ -189,8 +189,7 @@ public class MasterSparkController : MonoBehaviour
         );
         lr.colorGradient = gradient;
 
-        // Use the built-in sprite / particle shader so it renders on top of sprites
-        lr.material = new Material(Shader.Find("Sprites/Default"));
+         
 
         lr.sortingOrder = 10; // render in front of most sprites
     }

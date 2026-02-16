@@ -133,16 +133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9da738d227333f4794ee8dbd1c93c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserColors:
-  - {r: 0, g: 1, b: 0.10499692, a: 0}
-  - {r: 0.9062743, g: 1, b: 0, a: 0}
-  - {r: 1, g: 0.5307527, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0.0047169924, b: 0.44301507, a: 0}
-  - {r: 0, g: 0.09069872, b: 1, a: 0}
-  - {r: 0.0141509175, g: 1, b: 0.8132109, a: 0}
-  laserMaterial: {fileID: 2100000, guid: 7597fea7784a9594cab93b010d284198, type: 2}
-  shootingPoint: {fileID: 5460036247676944366}
+  maxLaserLength: 20
+  damagePerSecond: 20
+  laserWidth: 0.15
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  unfocusedAngle: 30
+  impactEffectPrefab: {fileID: 0}
 --- !u!120 &1588572828027558965
 LineRenderer:
   serializedVersion: 2
