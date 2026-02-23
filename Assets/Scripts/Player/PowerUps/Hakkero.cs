@@ -5,9 +5,19 @@ using UnityEngine;
 public class Hakkero : MonoBehaviour
 {
     LineRenderer lineRenderer;
-    private void Update()
+    bool isLeft;
+    
+
+
+    private void Awake()
     {
-        Debug.Log("Location of " + this.gameObject.name + ":" + transform.position);
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.enabled = false;
+        isLeft = transform.localScale.x < 0;
     }
+
+
+
+
 
 }
