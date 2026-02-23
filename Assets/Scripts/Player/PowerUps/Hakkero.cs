@@ -1,11 +1,13 @@
 ﻿
 using UnityEngine;
+using UnityEngine.ParticleSystemJobs;
 
 
 public class Hakkero : MonoBehaviour
 {
     LineRenderer lineRenderer;
     bool isLeft;
+    GameObject particleEffect;
     
 
 
