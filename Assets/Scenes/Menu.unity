@@ -5728,8 +5728,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3313850567883317419, guid: 3522ffa7cc6cd27459619cbfc759b889, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4705936409468519175}
   m_SourcePrefab: {fileID: 100100000, guid: 3522ffa7cc6cd27459619cbfc759b889, type: 3}
+--- !u!1 &4705936409468519174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3313850567883317419, guid: 3522ffa7cc6cd27459619cbfc759b889, type: 3}
+  m_PrefabInstance: {fileID: 4705936409468519173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4705936409468519175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4705936409468519174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

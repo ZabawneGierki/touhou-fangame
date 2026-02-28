@@ -77,6 +77,18 @@ MonoBehaviour:
     m_Localized: Hard
     m_Metadata:
       m_Items: []
+  - m_Id: 17778119927140352
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33295279629799424
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33295294892871680
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
