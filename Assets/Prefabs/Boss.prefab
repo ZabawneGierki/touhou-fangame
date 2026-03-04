@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerOfScreen: {x: -4.5, y: 2.2}
   healthBarFillImage: {fileID: 2535569899431075468}
-  inkAsset: {fileID: 4900000, guid: c486cb6e3b022ad448396ea472542206, type: 3}
+  inkAsset: {fileID: 4900000, guid: 298d85b5108e4044ba35e60494230280, type: 3}
   maxHealth: 100
   phases:
   - {fileID: 11400000, guid: cc9589a2a52dc6e4688a9b790a0749cf, type: 2}
