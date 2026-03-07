@@ -89,6 +89,10 @@ MonoBehaviour:
     m_Localized: Koniec gry
     m_Metadata:
       m_Items: []
+  - m_Id: 35841295457456128
+    m_Localized: Muzyka
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

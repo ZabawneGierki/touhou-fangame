@@ -89,6 +89,10 @@ MonoBehaviour:
     m_Localized: Quit
     m_Metadata:
       m_Items: []
+  - m_Id: 35841295457456128
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
