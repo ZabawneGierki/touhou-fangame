@@ -194,9 +194,7 @@ public class MasterSparkController : MonoBehaviour
         lr.sortingOrder = 10; // render in front of most sprites
     }
 
-    // =========================================================================
-    // Cleanup when the component itself is destroyed
-    // =========================================================================
+     
     private void OnDestroy()
     {
         StopLaser();
